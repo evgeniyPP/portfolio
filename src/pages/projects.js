@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import Layout from '../components/layout'
 
 export default () => {
   const query = useStaticQuery(graphql`
@@ -36,9 +35,9 @@ export default () => {
   })
 
   return (
-    <Layout>
+    <div>
       <h1>Мои проекты:</h1>
       <ul>{projects}</ul>
-    </Layout>
+    </div>
   )
 }

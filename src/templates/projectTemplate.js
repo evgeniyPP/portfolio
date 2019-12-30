@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import Layout from '../components/layout'
 
 export const query = graphql`
   query($slug: String!) {
@@ -33,7 +32,7 @@ export default props => {
   } = props.data.contentfulProject
 
   return (
-    <Layout>
+    <div>
       <h2>{name}</h2>
       <p>{technologies}</p>
       <p>
@@ -48,6 +47,6 @@ export default props => {
       </p>
       <img src={photo.file.url} alt="project screenshot" />
       {documentToReactComponents(description.json)}
-    </Layout>
+    </div>
   )
 }
