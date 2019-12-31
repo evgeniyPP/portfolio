@@ -55,9 +55,11 @@ export default () => {
           </div>
         </div>
       </div>
-      <div>
-        <h1>Мои проекты:</h1>
-        <ul>{projects}</ul>
+      <div className={styles.wrapper}>
+        <div className={styles.content}>
+          <h1>Мои проекты</h1>
+          <ul>{projects}</ul>
+        </div>
       </div>
     </React.Fragment>
   )

@@ -1,13 +1,16 @@
 @import './smart-grid.less';
 
+@bg-color: #8b0000;
+@whitish: #ffeeee;
+
 body {
-  background: center / cover no-repeat url('../images/bg.png');
+  background: @bg-color;
   min-height: 100vh;
 }
 
 .wrapper {
   .wrapper();
-  color: #fff;
+  color: @whitish;
 }
 
 .content {
@@ -38,13 +41,13 @@ body {
 
 .links {
   a {
-    color: #fff;
+    color: @whitish;
     margin-right: 1rem;
     transition: all 0.2s;
 
     &:hover,
     &:focus {
-      color: goldenrod;
+      color: #d74c4c;
       transition: all 0.2s;
     }
   }
@@ -99,11 +102,11 @@ body {
 }
 
 .navItem {
-  color: #fff;
+  color: @whitish;
   display: block;
   text-decoration: none;
   padding: 1rem 2rem;
-  border: 1px solid #fff;
+  border: 1px solid @whitish;
   transition: all 0.2s;
   font-size: 1.5rem;
   text-align: center;
@@ -111,8 +114,8 @@ body {
 
   &:hover,
   &:focus {
-    background: #fff;
-    color: #222;
+    background: @whitish;
+    color: @bg-color;
     transition: all 0.2s;
   }
 }
