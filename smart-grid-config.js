@@ -11,11 +11,15 @@ var settings = {
     fields: '30px' /* side fields */
   },
   breakPoints: {
+    xl: {
+      width: '1200px' /* -> @media (max-width: 1100px) */
+    },
     lg: {
       width: '1100px' /* -> @media (max-width: 1100px) */
     },
     md: {
-      width: '960px'
+      width: '960px',
+      fields: '50px'
     },
     sm: {
       width: '780px',
@@ -23,7 +27,7 @@ var settings = {
         '15px' /* set fields only if you want to change container.fields */
     },
     xs: {
-      width: '560px'
+      width: '530px'
     }
     /* 
         We can create any quantity of break points.

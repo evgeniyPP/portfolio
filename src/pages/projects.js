@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import styles from '../styles/projects.module.less'
 
 export default () => {
   const query = useStaticQuery(graphql`
@@ -35,9 +36,29 @@ export default () => {
   })
 
   return (
-    <div>
-      <h1>Мои проекты:</h1>
-      <ul>{projects}</ul>
-    </div>
+    <React.Fragment>
+      <div className={styles.debug}>
+        <div>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h1>Мои проекты:</h1>
+        <ul>{projects}</ul>
+      </div>
+    </React.Fragment>
   )
 }
