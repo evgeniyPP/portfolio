@@ -1,13 +1,32 @@
 @import './smart-grid.less';
-@import './_variables.less';
+@import './_assets.less';
 
 .content {
   .row-flex();
   margin-bottom: 2rem;
 
-  h1 {
+  .title {
     margin: 2rem @offset_one_side 1rem @offset_one_side;
-    .xs(font-size, 2.5rem);
+    display: flex;
+    align-items: center;
+
+    h1 {
+      display: inline-block;
+      margin: 0;
+      .xs(font-size, 2.5rem);
+    }
+
+    .icon {
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+
+    .hover();
+  }
+
+  a {
+    color: @whitish;
+    text-decoration: none;
   }
 }
 
@@ -45,11 +64,6 @@ li {
     .md(margin-top, 1rem);
   }
 
-  a {
-    color: @whitish;
-    text-decoration: none;
-  }
-
   &__title {
     margin-bottom: 1rem;
     .xs(font-size, 1.5rem);
@@ -65,16 +79,7 @@ li {
     display: inline-block;
     width: 100px;
     padding: 0.25rem;
-    border: 1px solid @whitish;
-    transition: all 0.2s;
-    text-align: center;
-
-    &:hover,
-    &:focus {
-      background: @whitish;
-      color: @bg-color;
-      transition: all 0.2s;
-    }
+    .btn();
   }
 
   &:hover,

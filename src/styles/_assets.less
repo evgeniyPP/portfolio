@@ -1,0 +1,23 @@
+@bg-color: #8b0000;
+@whitish: #ffeeee;
+
+.hover() {
+  &:hover,
+  &:focus {
+    color: #d74c4c;
+    transition: all 0.2s;
+  }
+}
+
+.btn() {
+  border: 1px solid @whitish;
+  transition: all 0.2s;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background: @whitish;
+    color: @bg-color;
+    transition: all 0.2s;
+  }
+}

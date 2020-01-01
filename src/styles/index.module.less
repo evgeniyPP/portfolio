@@ -1,5 +1,5 @@
 @import './smart-grid.less';
-@import './_variables.less';
+@import './_assets.less';
 
 .content {
   .row-flex();
@@ -33,12 +33,7 @@
     color: @whitish;
     margin-right: 1rem;
     transition: all 0.2s;
-
-    &:hover,
-    &:focus {
-      color: #d74c4c;
-      transition: all 0.2s;
-    }
+    .hover();
   }
 }
 
@@ -96,18 +91,9 @@
   display: block;
   text-decoration: none;
   padding: 1rem 2rem;
-  border: 1px solid @whitish;
-  transition: all 0.2s;
   font-size: 1.5rem;
-  text-align: center;
   font-weight: bold;
-
-  &:hover,
-  &:focus {
-    background: @whitish;
-    color: @bg-color;
-    transition: all 0.2s;
-  }
+  .btn();
 }
 
 @media screen and (min-height: 850px) {

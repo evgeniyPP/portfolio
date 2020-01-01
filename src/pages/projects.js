@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretLeft } from '@fortawesome/free-solid-svg-icons'
 import styles from '../styles/projects.module.less'
 
 export default () => {
@@ -62,7 +64,10 @@ export default () => {
   return (
     <div className="wrapper">
       <div className={styles.content}>
-        <h1>Мои проекты</h1>
+        <Link to="/" className={styles.title}>
+          <FontAwesomeIcon className={styles.icon} icon={faCaretLeft} />
+          <h1>Мои проекты</h1>
+        </Link>
         <ul className={styles.projects}>{projects}</ul>
       </div>
     </div>
