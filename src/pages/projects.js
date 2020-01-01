@@ -10,7 +10,10 @@ export default () => {
           node {
             name
             slug
+            shortDescription
             technologies
+            githubLink
+            siteLink
             photo {
               file {
                 url
@@ -23,12 +26,33 @@ export default () => {
   `)
 
   const projects = query.allContentfulProject.edges.map(edge => {
-    const { name, slug, technologies, photo } = edge.node
+    const {
+      name,
+      slug,
+      shortDescription,
+      technologies,
+      githubLink,
+      siteLink,
+      photo
+    } = edge.node
     return (
-      <li key={slug}>
-        <Link to={`/projects/${slug}`}>
-          <h4>{name}</h4>
-          <p>{technologies}</p>
+      <li className={styles.project} key={slug}>
+        <div className={styles.project__text}>
+          <Link to={`/projects/${slug}`}>
+            <h2 className={styles.project__title}>{name}</h2>
+            <p className={styles.project__shortDesc}>{shortDescription}</p>
+            <p>{technologies}</p>
+          </Link>
+          <div className={styles.links}>
+            <a href={githubLink} target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+            <a href={siteLink} target="_blank" rel="noopener noreferrer">
+              Сайт
+            </a>
+          </div>
+        </div>
+        <Link className={styles.project__image} to={`/projects/${slug}`}>
           <img src={photo.file.url} alt={slug} />
         </Link>
       </li>
@@ -36,31 +60,11 @@ export default () => {
   })
 
   return (
-    <React.Fragment>
-      <div className={styles.debug}>
-        <div>
-          <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+    <div className="wrapper">
+      <div className={styles.content}>
+        <h1>Мои проекты</h1>
+        <ul className={styles.projects}>{projects}</ul>
       </div>
-      <div className={styles.wrapper}>
-        <div className={styles.content}>
-          <h1>Мои проекты</h1>
-          <ul>{projects}</ul>
-        </div>
-      </div>
-    </React.Fragment>
+    </div>
   )
 }

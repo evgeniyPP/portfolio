@@ -6,13 +6,14 @@ import {
   faVk,
   faTelegramPlane
 } from '@fortawesome/free-brands-svg-icons'
+import '../styles/global.less'
 import styles from '../styles/index.module.less'
 import avatar from '../images/avatar.png'
 
 export default () => (
-  <div className={styles.wrapper}>
+  <div className="wrapper">
     <div className={styles.content}>
-      <div className={styles.leftSide}>
+      <section className={styles.leftSide}>
         <h1>Евгений Петрянкин</h1>
         <h2>Веб-разработчик</h2>
         <div className={styles.links}>
@@ -38,9 +39,9 @@ export default () => (
             <FontAwesomeIcon className={styles.icon} icon={faTelegramPlane} />
           </a>
         </div>
-      </div>
+      </section>
 
-      <div className={styles.rightSide}>
+      <section className={styles.rightSide}>
         <div className={styles.aboutMe}>
           <h3>Обо мне</h3>
           <div className={styles.aboutMe__content}>
@@ -65,7 +66,7 @@ export default () => (
             Моё резюме
           </Link>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 )

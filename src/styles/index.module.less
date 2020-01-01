@@ -1,23 +1,12 @@
 @import './smart-grid.less';
-
-@bg-color: #8b0000;
-@whitish: #ffeeee;
-
-body {
-  background: @bg-color;
-  min-height: 100vh;
-}
-
-.wrapper {
-  .wrapper();
-  color: @whitish;
-}
+@import './_variables.less';
 
 .content {
   .row-flex();
   .md(flex-direction, column);
 }
 
+// LEFT SIDE
 .leftSide {
   .col();
   .size(7);
@@ -57,6 +46,7 @@ body {
   font-size: 2rem;
 }
 
+// RIGHT SIDE
 .rightSide {
   .col();
   .size(5);

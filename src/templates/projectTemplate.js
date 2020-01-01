@@ -32,21 +32,41 @@ export default props => {
   } = props.data.contentfulProject
 
   return (
-    <div>
-      <h2>{name}</h2>
-      <p>{technologies}</p>
-      <p>
-        <a href={githubLink} target="_blank" rel="noopener noreferrer">
-          {githubLink}
-        </a>
-      </p>
-      <p>
-        <a href={siteLink} target="_blank" rel="noopener noreferrer">
-          {siteLink}
-        </a>
-      </p>
-      <img src={photo.file.url} alt="project screenshot" />
-      {documentToReactComponents(description.json)}
-    </div>
+    <React.Fragment>
+      <div className="debug">
+        <div>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>{name}</h2>
+        <p>{technologies}</p>
+        <p>
+          <a href={githubLink} target="_blank" rel="noopener noreferrer">
+            {githubLink}
+          </a>
+        </p>
+        <p>
+          <a href={siteLink} target="_blank" rel="noopener noreferrer">
+            {siteLink}
+          </a>
+        </p>
+        <img src={photo.file.url} alt="project screenshot" />
+        {documentToReactComponents(description.json)}
+      </div>
+    </React.Fragment>
   )
 }
