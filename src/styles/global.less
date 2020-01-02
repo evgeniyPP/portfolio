@@ -11,6 +11,14 @@ body {
   color: @whitish;
 }
 
+@media screen and (min-height: 850px) and (max-width: @break_md) {
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
 .debug {
   .debug(rgba(256, 256, 256, 0.1), 1px dotted @whitish);
 }
