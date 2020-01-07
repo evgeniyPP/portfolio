@@ -7,10 +7,22 @@ import styles from '../styles/stars.module.less'
 export default ({ level }) => {
   const stars = []
   for (let i = 0; i < level; i++) {
-    stars.push(<FontAwesomeIcon icon={solidStar} className={styles.star} />)
+    stars.push(
+      <FontAwesomeIcon
+        key={`solid-${i}`}
+        icon={solidStar}
+        className={styles.star}
+      />
+    )
   }
   for (let i = 0; i < 10 - level; i++) {
-    stars.push(<FontAwesomeIcon icon={regStar} className={styles.star} />)
+    stars.push(
+      <FontAwesomeIcon
+        key={`reg-${i}`}
+        icon={regStar}
+        className={styles.star}
+      />
+    )
   }
 
   return <div>{stars}</div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+// import { Link, graphql, useStaticQuery } from 'gatsby'
 import Header from '../components/header'
 import styles from '../styles/resume.module.less'
 

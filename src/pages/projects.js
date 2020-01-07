@@ -6,7 +6,7 @@ import styles from '../styles/projects.module.less'
 export default () => {
   const query = useStaticQuery(graphql`
     query {
-      allContentfulProject {
+      allContentfulProject(sort: { fields: position, order: ASC }) {
         edges {
           node {
             name

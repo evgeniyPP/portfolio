@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Header from '../components/header'
 import Stars from '../components/stars'
 import styles from '../styles/skills.module.less'
@@ -13,6 +13,11 @@ export default () => {
             technology
             level
           }
+        }
+      }
+      site {
+        siteMetadata {
+          techologies
         }
       }
     }
@@ -30,6 +35,8 @@ export default () => {
       </li>
     )
   })
+
+  const techologies = query.site.siteMetadata.techologies
 
   return (
     <div className="wrapper">
@@ -57,7 +64,7 @@ export default () => {
         <ul className={styles.skills}>
           {skills}
           <li className={styles.other}>
-            А также: <span>Git, Svelte, GatsbyJS, GraphQL</span> и многое другое
+            А также: <span>{techologies}</span> и многое другое
           </li>
         </ul>
       </div>

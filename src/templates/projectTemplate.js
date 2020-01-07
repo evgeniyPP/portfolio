@@ -1,6 +1,8 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import Header from '../components/header'
+import styles from '../styles/projectTemplate.module.less'
 
 export const query = graphql`
   query($slug: String!) {
@@ -51,21 +53,34 @@ export default props => {
           </div>
         </div>
       </div>
-      <div>
-        <h2>{name}</h2>
-        <p>{technologies}</p>
-        <p>
-          <a href={githubLink} target="_blank" rel="noopener noreferrer">
-            {githubLink}
-          </a>
-        </p>
-        <p>
-          <a href={siteLink} target="_blank" rel="noopener noreferrer">
-            {siteLink}
-          </a>
-        </p>
-        <img src={photo.file.url} alt="project screenshot" />
-        {documentToReactComponents(description.json)}
+      <div className="wrapper">
+        <div className={styles.content}>
+          <Header to="/projects">{name}</Header>
+          <div className={styles.project}>
+            <Link className={styles.technologies} to="/skills">
+              {technologies}
+            </Link>
+            <div className={styles.links}>
+              <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                Github
+              </a>
+              <a href={siteLink} target="_blank" rel="noopener noreferrer">
+                Сайт
+              </a>
+            </div>
+            <a
+              className={styles.image}
+              href={siteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={photo.file.url} alt="project screenshot" />
+            </a>
+            <div className={styles.description}>
+              {documentToReactComponents(description.json)}
+            </div>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   )
