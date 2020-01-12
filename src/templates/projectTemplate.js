@@ -34,54 +34,34 @@ export default props => {
   } = props.data.contentfulProject
 
   return (
-    <React.Fragment>
-      <div className="debug">
-        <div>
-          <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-      </div>
-      <div className="wrapper">
-        <div className={styles.content}>
-          <Header to="/projects">{name}</Header>
-          <div className={styles.project}>
-            <Link className={styles.technologies} to="/skills">
-              {technologies}
-            </Link>
-            <div className={styles.links}>
-              <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                Github
-              </a>
-              <a href={siteLink} target="_blank" rel="noopener noreferrer">
-                Сайт
-              </a>
-            </div>
-            <a
-              className={styles.image}
-              href={siteLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={photo.file.url} alt="project screenshot" />
+    <div className="wrapper">
+      <div className={styles.content}>
+        <Header to="/projects">{name}</Header>
+        <div className={styles.project}>
+          <Link className={styles.technologies} to="/skills">
+            {technologies}
+          </Link>
+          <div className={styles.links}>
+            <a href={githubLink} target="_blank" rel="noopener noreferrer">
+              Github
             </a>
-            <div className={styles.description}>
-              {documentToReactComponents(description.json)}
-            </div>
+            <a href={siteLink} target="_blank" rel="noopener noreferrer">
+              Сайт
+            </a>
+          </div>
+          <a
+            className={styles.image}
+            href={siteLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={photo.file.url} alt="project screenshot" />
+          </a>
+          <div className={styles.description}>
+            {documentToReactComponents(description.json)}
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   )
 }

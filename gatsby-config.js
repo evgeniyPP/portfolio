@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    techologies: 'Git, Svelte, React Native, GatsbyJS, GraphQL'
+    techologies:
+      'Redux, Git, Node.js, Svelte, React Native, GatsbyJS, NuxtJS, GraphQL, REST, MongoDB, Express, Firebase, CSS-препроцессоры (Sass, Less), styled-components, Bootstrap, Webpack, Gulp, французский, арабский (письменный)'
   },
   plugins: [
     // `gatsby-plugin-react-helmet`,

@@ -5,3 +5,38 @@ a {
   color: @whitish;
   text-decoration: none;
 }
+
+.content {
+  .row-flex();
+  justify-content: center;
+}
+
+.download {
+  .col();
+  .size(5);
+  .size-md(6);
+  .size-sm(7);
+  .size-xs(10);
+  margin-top: 2.5rem;
+  .md(margin-top, 1rem);
+  .xs-block({margin-top: 0; margin-bottom: 0;});
+  padding: 1.5rem;
+  transition: all 0.2s;
+
+  img {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 1rem;
+    .sm(margin-top, 0);
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+
+  &:hover,
+  &:focus {
+    background: @dark-hover;
+    transition: all 0.2s;
+  }
+}
