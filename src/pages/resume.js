@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../components/header'
+import Helmet from '../components/helmet'
 import styles from '../styles/resume.module.less'
 import imgDocx from '../images/resume-docx.png'
 import imgPdf from '../images/resume-pdf.png'
@@ -7,6 +8,7 @@ import imgPdf from '../images/resume-pdf.png'
 export default () => {
   return (
     <div className="wrapper">
+      <Helmet title="Резюме" />
       <div>
         <Header>Моё резюме</Header>
         <section className={styles.content}>

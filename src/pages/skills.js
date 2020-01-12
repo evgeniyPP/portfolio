@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Header from '../components/header'
+import Helmet from '../components/helmet'
 import Stars from '../components/stars'
 import styles from '../styles/skills.module.less'
 
@@ -40,6 +41,7 @@ export default () => {
 
   return (
     <div className="wrapper">
+      <Helmet title="Стек" />
       <div className={styles.content}>
         <Header>Мой стек</Header>
         <div className={styles.description}>

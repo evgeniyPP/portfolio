@@ -3,12 +3,14 @@ import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
 import { faAt } from '@fortawesome/free-solid-svg-icons'
+import Helmet from '../components/helmet'
 import '../styles/global.less'
 import styles from '../styles/index.module.less'
 import avatar from '../images/avatar.png'
 
 export default () => (
   <div className="wrapper">
+    <Helmet title="Главная" />
     <div className={styles.content}>
       <section className={styles.leftSide}>
         <h1>Евгений Петрянкин</h1>

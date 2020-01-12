@@ -4,7 +4,7 @@ module.exports = {
       'Redux, Git, Node.js, Svelte, React Native, GatsbyJS, NuxtJS, GraphQL, REST, MongoDB, Express, Firebase, CSS-препроцессоры (Sass, Less), styled-components, Bootstrap, Webpack, Gulp, французский, арабский (письменный)'
   },
   plugins: [
-    // `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

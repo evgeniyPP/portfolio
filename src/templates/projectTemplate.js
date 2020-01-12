@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Header from '../components/header'
+import Helmet from '../components/helmet'
 import styles from '../styles/projectTemplate.module.less'
 
 export const query = graphql`
@@ -35,6 +36,7 @@ export default props => {
 
   return (
     <div className="wrapper">
+      <Helmet title={name} />
       <div className={styles.content}>
         <Header to="/projects">{name}</Header>
         <div className={styles.project}>
