@@ -1,11 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faGithub,
-  faVk,
-  faTelegramPlane
-} from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
+import { faAt } from '@fortawesome/free-solid-svg-icons'
 import '../styles/global.less'
 import styles from '../styles/index.module.less'
 import avatar from '../images/avatar.png'
@@ -21,22 +18,25 @@ export default () => (
             href="https://github.com/evgeniyPP"
             target="_blank"
             rel="noopener noreferrer"
+            title="github.com/evgeniyPP"
           >
             <FontAwesomeIcon className={styles.icon} icon={faGithub} />
-          </a>
-          <a
-            href="https://vk.com/fkeromanov"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon className={styles.icon} icon={faVk} />
           </a>
           <a
             href="https://t.me/evgeniy_pp"
             target="_blank"
             rel="noopener noreferrer"
+            title="@evgeniyPP"
           >
             <FontAwesomeIcon className={styles.icon} icon={faTelegramPlane} />
+          </a>
+          <a
+            href="mailto:aysanru@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="aysanru@gmail.com"
+          >
+            <FontAwesomeIcon className={styles.icon} icon={faAt} />
           </a>
         </div>
       </section>
