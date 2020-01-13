@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import Header from '../components/header'
 import Helmet from '../components/helmet'
+import WithPreloader from '../utils/withPreloader'
 import styles from '../styles/projects.module.less'
 
 export default () => {
@@ -62,12 +63,14 @@ export default () => {
   })
 
   return (
-    <div className="wrapper">
-      <Helmet title="Проекты" />
-      <div className={styles.content}>
-        <Header>Мои проекты</Header>
-        <ul className={styles.projects}>{projects}</ul>
+    <WithPreloader>
+      <div className="wrapper">
+        <Helmet title="Проекты" />
+        <div className={styles.content}>
+          <Header>Мои проекты</Header>
+          <ul className={styles.projects}>{projects}</ul>
+        </div>
       </div>
-    </div>
+    </WithPreloader>
   )
 }
