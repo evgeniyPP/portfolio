@@ -11,20 +11,20 @@
   .col();
   .size(7);
   .size-xl(6);
-  .size-lg(5);
   .size-md(12);
   .md(margin-top, 2rem);
+  .xs(margin-top, 0);
   .xs(text-align, center);
   align-self: center;
 
   h1 {
-    margin-bottom: 1rem;
-    .xs(font-size, 2.5rem);
+    margin-bottom: 0.65rem;
+    .lg(font-size, 2.5rem);
+    .xs(margin-top, 2rem);
   }
   h2 {
     font-weight: normal;
     margin-bottom: 1.5rem;
-    .xs(font-size, 1.5rem);
   }
 }
 
@@ -50,7 +50,6 @@
   .col();
   .size(5);
   .size-xl(6);
-  .size-lg(7);
   .size-md(12);
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -64,10 +63,13 @@
 .aboutMe {
   h3 {
     .md(display, none);
+    margin-bottom: 0.75rem;
   }
 
   &__content {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   p {
@@ -88,6 +90,7 @@
 .navbar {
   width: 100%;
   margin: 0 auto;
+  .md(margin-top, 2rem);
 }
 
 .navItem {

@@ -3,6 +3,11 @@
 
 .content {
   .row-flex();
+
+  h1 {
+    width: 85vw;
+    word-wrap: break-word;
+  }
 }
 
 .project {
@@ -14,6 +19,7 @@
     font-size: 1.75rem;
     margin: 0 auto;
     margin-bottom: 1rem;
+    text-align: center;
 
     @media screen and (max-width: 767px) {
       font-size: 1.25rem;
@@ -42,6 +48,10 @@
   }
 
   .description {
-    margin-top: 1rem;
+    margin: 1rem 0;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
   }
 }
