@@ -4,8 +4,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    techologies:
-      'Redux, Git, Node.js, Svelte, React Native, GatsbyJS, NuxtJS, GraphQL, REST, MongoDB, Express, Firebase, Webpack, Gulp, CSS-препроцессоры (Sass, Less), styled-components, Bootstrap, Webpack, Gulp, французский, арабский (письменный)'
+    technologies:
+      'React, Vue, vanilla JavaScript, Верстка (HTML, CSS), Git, Английский, Typescript, Redux, Node.js, Svelte, React Native, GatsbyJS, NuxtJS, GraphQL, REST, MongoDB, Express, Firebase, Webpack, Gulp, CSS-препроцессоры (Sass, Less), styled-components, Bootstrap, Webpack, Gulp'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

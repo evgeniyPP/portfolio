@@ -60,8 +60,8 @@ export default () => (
           </div>
 
           <div className={styles.navbar}>
-            <Link className={styles.navItem} to="/skills">
-              Мой стек
+            <Link className={styles.navItem} to="/about">
+              Обо мне
             </Link>
             <Link className={styles.navItem} to="/projects">
               Мои проекты

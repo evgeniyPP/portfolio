@@ -68,17 +68,19 @@ export default () => {
         <Helmet title="Проекты" />
         <div className={styles.content}>
           <Header>Мои проекты</Header>
-          <ul className={styles.projects}>{projects}</ul>
-          <p className={styles.moreProjects}>
-            Еще больше проектов в моем{' '}
-            <a
-              href="https://github.com/evgeniyPP?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github
-            </a>
-          </p>
+          <ul className={styles.projects}>
+            {projects}
+            <li className={styles.moreProjects}>
+              Еще больше проектов в моем{' '}
+              <a
+                href="https://github.com/evgeniyPP?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </WithPreloader>
