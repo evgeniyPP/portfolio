@@ -25,6 +25,7 @@ export default () => (
               title="github.com/evgeniyPP"
             >
               <FontAwesomeIcon className={styles.icon} icon={faGithub} />
+              <span>@evgeniyPP</span>
             </a>
             <a
               href="https://t.me/evgeniy_pp"
@@ -33,6 +34,7 @@ export default () => (
               title="@evgeniyPP"
             >
               <FontAwesomeIcon className={styles.icon} icon={faTelegramPlane} />
+              <span>@evgeniyPP</span>
             </a>
             <a
               href="mailto:aysanru@gmail.com"
@@ -41,6 +43,7 @@ export default () => (
               title="aysanru@gmail.com"
             >
               <FontAwesomeIcon className={styles.icon} icon={faAt} />
+              <span>aysanru@gmail.com</span>
             </a>
           </div>
         </section>

@@ -34,6 +34,10 @@
     margin-right: 1rem;
     transition: all 0.2s;
     .hover();
+
+    span {
+      display: none;
+    }
   }
 
   a:last-child {
@@ -108,5 +112,24 @@
 @media screen and (min-height: 850px) {
   .rightSide {
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin-bottom: 0.5rem;
+
+      svg {
+        margin-right: 10px;
+      }
+
+      span {
+        display: inline;
+      }
+    }
   }
 }
